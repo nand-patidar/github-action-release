@@ -50,7 +50,7 @@
 
 	<build>
 		<plugins>
-			<!--<plugin>
+			<plugin>
 				<groupId>com.amashchenko.maven.plugin</groupId>
 				<artifactId>gitflow-maven-plugin</artifactId>
 				<version>1.6.0</version>
@@ -86,18 +86,18 @@
 						<tagReleaseMessage>tag release</tagReleaseMessage>
 					</commitMessages>
 				</configuration>
-			</plugin>	-->
-			
-			<!--<plugin>
+			</plugin>			
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3.9</version>
+				<version>3.8.0</version>
 				<configuration>
 					<source>${maven.compiler.source}</source>
 					<target>${maven.compiler.target}</target>
 					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
-			</plugin> -->
+			</plugin>
+
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<configuration>
@@ -125,18 +125,6 @@
 	</build>
 
 	<dependencies>
-				<!-- https://mvnrepository.com/artifact/com.amashchenko.maven.plugin/gitflow-maven-plugin -->
-		<dependency>
-			<groupId>com.amashchenko.maven.plugin</groupId>
-			<artifactId>gitflow-maven-plugin</artifactId>
-			<version>1.18.0</version>
-		</dependency>
-	
-		<dependency>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.8.1</version>
-		</dependency>
 
 		<dependency>
 		      <groupId>junit</groupId>
