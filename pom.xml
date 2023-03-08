@@ -87,11 +87,7 @@
 					</commitMessages>
 				</configuration>
 			</plugin>	-->
-			 <plugin>
-				<groupId>com.amashchenko.maven.plugin</groupId>
-				<artifactId>gitflow-maven-plugin</artifactId>
-				<version>1.19.0</version>
-			  </plugin>	
+			
 			<!--<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -129,7 +125,13 @@
 	</build>
 
 	<dependencies>
-			<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+				<!-- https://mvnrepository.com/artifact/com.amashchenko.maven.plugin/gitflow-maven-plugin -->
+		<dependency>
+			<groupId>com.amashchenko.maven.plugin</groupId>
+			<artifactId>gitflow-maven-plugin</artifactId>
+			<version>1.18.0</version>
+		</dependency>
+	
 		<dependency>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-compiler-plugin</artifactId>
