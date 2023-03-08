@@ -18,8 +18,15 @@ jobs:
           cache: 'maven'
           server-id: github    
          
+      - name: Extract Maven project version
+        run: echo ::set-output name=version::$(mvn -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)
+        id: project
+
+      - name: Show extracted Maven project version
+        run: echo ${{ steps.project.outputs.version }}put name=version::$VERSION"
+        id: get_version   
       - name: Configure Git user
-        run:          
+        run: |
           git config user.email "nk.patidar01@gmail.com"
           git config user.name "nandkishore-patidar"         
           git fetch origin
@@ -29,5 +36,4 @@ jobs:
      
         env:
           GITHUB_TOKEN: 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
-    
           
