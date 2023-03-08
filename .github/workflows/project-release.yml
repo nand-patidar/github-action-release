@@ -9,14 +9,19 @@ jobs:
     permissions:
       contents: read
       packages: write
+      
+    strategy:
+      matrix:
+        maven: [ '3.6.3', '3.8.7', '3.9.0' ]
+
+    name: Maven ${{ matrix.maven }} sample  
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-java@v3
         with:
           distribution: 'adopt'
           java-version: '11'
-          cache: 'maven'
-          server-id: github 
+          maven-version: ${{ matrix.maven }}
      
       - name: Configure Git release
         run: |
