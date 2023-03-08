@@ -29,12 +29,5 @@ jobs:
      
         env:
           GITHUB_TOKEN: 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
-          
-      - name: Extract Maven project version
-        run: echo ::set-output name=version::$(mvn -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)
-        id: project
-
-      - name: Show extracted Maven project version
-        run: echo ${{ steps.project.outputs.version }}put name=version::$VERSION"
-        id: get_version    
+    
           
