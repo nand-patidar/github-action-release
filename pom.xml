@@ -15,10 +15,8 @@
 		<maven.compiler.target>11</maven.compiler.target>
 	</properties>
 	
-	<scm>
-        <connection>scm:git:https://github.com/nandkishore-patidar/github-action-release.git</connection>
-     <developerConnection>scm:git:https://github.com/nandkishore-patidar/github-action-release.git</developerConnection>
-        <url>https://github.com/nandkishore-patidar/github-action-release</url>
+	<scm>        
+     <developerConnection>scm:git:https://github.com/nandkishore-patidar/github-action-release.git</developerConnection>      
     </scm>
 
 	<profiles>
@@ -89,7 +87,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.0</version>
+				<version>3.9.0</version>
 				<configuration>
 					<source>${maven.compiler.source}</source>
 					<target>${maven.compiler.target}</target>
