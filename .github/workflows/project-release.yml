@@ -18,7 +18,7 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: '11'         
-      -uses: stCarolas/setup-maven@v4.5
+      - uses: stCarolas/setup-maven@v4.5
         with:
           maven-version: 3.8.2
       - name: Configure Git release
