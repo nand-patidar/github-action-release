@@ -10,15 +10,17 @@ jobs:
       contents: read
       packages: write
     
-    name: configure java and maven version 
+    
+    name: Prepare release
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-java@v3
         with:
           distribution: 'adopt'
-          java-version: '11'
-          maven-version: '3.8.0'
-     
+          java-version: '11'         
+      -uses: stCarolas/setup-maven@v4.5
+        with:
+          maven-version: 3.8.2
       - name: Configure Git release
         run: |
           mvn help:evaluate -Dexpression=project.groupId -q -DforceStdout
